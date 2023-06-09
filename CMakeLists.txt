@@ -74,7 +74,7 @@ endif()
 
 option(ABSL_USE_SYSTEM_INCLUDES
   "Silence warnings in Abseil headers by marking them as SYSTEM includes"
-  OFF)
+  ON)
 
 list(APPEND CMAKE_MODULE_PATH
   ${CMAKE_CURRENT_LIST_DIR}/CMake
