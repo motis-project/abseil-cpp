@@ -338,7 +338,11 @@ Cflags: -I\${includedir}${PC_CFLAGS}\n")
     )
   endif()
 
-    add_library(absl::${ABSL_CC_LIB_NAME} ALIAS ${_NAME})
+  add_library(absl::${ABSL_CC_LIB_NAME} ALIAS ${_NAME})
+
+  if (CMAKE_OSX_ARCHITECTURES)
+    set_target_properties(${_NAME} PROPERTIES OSX_ARCHITECTURES "x86_64;arm64")
+  endif()
 endfunction()
 
 # absl_cc_test()
