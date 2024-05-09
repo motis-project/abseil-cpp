@@ -15,6 +15,10 @@
 // Functions for directly invoking mmap() via syscall, avoiding the case where
 // mmap() has been locally overridden.
 
+#ifndef _LARGEFILE64_SOURCE
+#define _LARGEFILE64_SOURCE
+#endif
+
 #ifndef ABSL_BASE_INTERNAL_DIRECT_MMAP_H_
 #define ABSL_BASE_INTERNAL_DIRECT_MMAP_H_
 
