@@ -23,6 +23,7 @@
 #include <tuple>
 #include <type_traits>
 #include <utility>
+#include <stdint.h>
 
 #include "absl/base/config.h"
 #include "absl/memory/memory.h"
